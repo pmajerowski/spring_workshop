@@ -8,6 +8,7 @@ import java.util.List;
 @Component
 public class MockBookService {
     private List<Book> list;
+    private static Long nextId = 0L;
 
     public MockBookService() {
         list = new ArrayList<>();
@@ -32,7 +33,11 @@ public class MockBookService {
     }
 
     public void addBook(Book book) {
-        Long nextId = list.get(list.size()-1).getId() + 1;
+        if(list.size() < 1) {
+            nextId += 1;
+        } else {
+            nextId = list.get(list.size() - 1).getId() + 1;
+        }
         book.setId(nextId);
         list.add(book);
     }
