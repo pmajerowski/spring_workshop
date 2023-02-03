@@ -3,6 +3,7 @@ package pl.coderslab;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Component
@@ -19,7 +20,8 @@ public class MockBookService {
                 "programming"));
         list.add(new Book(4L, "4534545819338", "Harry Potter", "J. K. Rowling", "Gryffindor",
                 "fantasy"));
-        nextId = (long) list.size();
+
+        nextId = list.stream().map(Book::getId).max(Comparator.naturalOrder()).get();
     }
 
     public List<Book> getAllBooks() {
