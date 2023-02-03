@@ -48,9 +48,8 @@ public class MockBookService {
 
     }
 
-    public void deleteBook(int book_id) {
-        int index = list.indexOf(getBook((long) book_id));
-        list.remove(index);
+    public void deleteBook(long book_id) {
+        list.remove(getBook(book_id));
     }
 
 }
