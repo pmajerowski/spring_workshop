@@ -9,13 +9,13 @@ import java.util.Optional;
 public class MockBookService {
     private List<Book> list;
 
-    public List<pl.coderslab.Book> get() {
+    public List<Book> getAllBooks() {
         return list;
     }
 
-    public Book get(Long id) {
+    public Book getBook(Long book_id) {
          return list.stream()
-                .filter(b -> b.getId() == id)
+                .filter(b -> b.getId() == book_id)
                 .findFirst()
                  .get();
     }

@@ -7,11 +7,11 @@ import java.util.List;
 @RestController
 @RequestMapping("/books")
 public class BookController {
-//    private MockBookService mockBookService;
-//
-//    public BookController(MockBookService mockBookService) {
-//        this.mockBookService = mockBookService;
-//    }
+    private MockBookService mockBookService;
+
+    public BookController(MockBookService mockBookService) {
+        this.mockBookService = mockBookService;
+    }
 
     @RequestMapping("/helloBook")
     public Book helloBook() {
@@ -19,21 +19,15 @@ public class BookController {
     }
 
 
-//
-//    @RequestMapping("/all")
-//    public List<Book> allBooks() {
-//        return mockBookService.get();
-//    }
 
-
-    @GetMapping("/add")
-    public String addBook() {
-        return "/form";
+    @RequestMapping
+    public List<Book> allBooks() {
+        return mockBookService.getAllBooks();
     }
 
-    @PostMapping("/add")
-    @ResponseBody
-    public String added() {
-        return "added";
+    @RequestMapping("/{id}")
+    public Book getBook(@PathVariable Long id) {
+        return mockBookService.getBook(id);
     }
+
 }
