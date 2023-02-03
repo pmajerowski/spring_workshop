@@ -17,6 +17,29 @@ public class Book {
         this.type = type;
     }
 
+    public Book(String isbn, String title, String author, String publisher, String type) {
+        this.isbn = isbn;
+        this.title = title;
+        this.author = author;
+        this.publisher = publisher;
+        this.type = type;
+    }
+
+    public Book() {
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", isbn='" + isbn + '\'' +
+                ", title='" + title + '\'' +
+                ", author='" + author + '\'' +
+                ", publisher='" + publisher + '\'' +
+                ", type='" + type + '\'' +
+                '}';
+    }
+
     public long getId() {
         return id;
     }
