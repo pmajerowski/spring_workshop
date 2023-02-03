@@ -7,8 +7,8 @@ import java.util.List;
 
 @Component
 public class MockBookService {
-    private List<Book> list;
-    private static Long nextId = 0L;
+    private final List<Book> list;
+    private static Long nextId;
 
     public MockBookService() {
         list = new ArrayList<>();
@@ -19,6 +19,7 @@ public class MockBookService {
                 "programming"));
         list.add(new Book(4L, "4534545819338", "Harry Potter", "J. K. Rowling", "Gryffindor",
                 "fantasy"));
+        nextId = (long) list.size();
     }
 
     public List<Book> getAllBooks() {
@@ -26,18 +27,14 @@ public class MockBookService {
     }
 
     public Book getBook(Long book_id) {
-         return list.stream()
+        return list.stream()
                 .filter(b -> b.getId() == book_id)
                 .findFirst()
-                 .get();
+                .get();
     }
 
     public void addBook(Book book) {
-        if(list.size() < 1) {
-            nextId += 1;
-        } else {
-            nextId = list.get(list.size() - 1).getId() + 1;
-        }
+        nextId += 1;
         book.setId(nextId);
         list.add(book);
     }
