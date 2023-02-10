@@ -1,0 +1,116 @@
+.error {
+    color: #c72d2d;
+    background: antiquewhite;
+    text-align: center;
+
+    width: 257px;
+    padding: 7px 20px 7px 20px;
+    border-radius: 5px;
+}
+
+
+body {
+    /*background: #2d2d2d;*/
+    background: linear-gradient(#2d2d2d, #252526);
+    margin-top: 20px;
+    color: #b6b6c9;
+    font-family: "Adobe Heiti Std";
+}
+
+h1, h2, h3 {
+    color: #b0965d;
+    margin-left: 40px;
+    margin-right: 20px;
+    font-size: x-large;
+}
+
+p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    border: solid #b0805d;
+    /*padding: 1px 3px 1px 3px;*/
+    background: #2e3636;
+    color: #c5c0a4;
+
+    margin-left: -3px;
+    margin-right: -3px;
+    width: 70px;
+    height: 50em;
+    padding: 7px 20px 7px 20px;
+
+    align-content: center;
+    text-align: center;
+
+    font-size: small;
+    border-radius: 7px;
+}
+
+.btn:hover {
+    background: #5e8181;
+}
+
+.btn_2:hover {
+    background: #5e8181;
+}
+
+input {
+    width: 257px;
+    height: 36px;
+    background: #e6e6ee;
+    font-size: large;
+}
+
+input:hover {
+    animation: ease-in-out;
+}
+
+.btn_2 {
+    border-radius: 6px;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: menulist-button;
+
+    text-decoration: none;
+    border: solid #b0805d;
+    padding: 3px 9px 3px 9px;
+    background: #2e3636;
+    color: #c5c0a4;
+    margin-left: 3px;
+    margin-right: 3px;
+
+    text-align: center;
+}
+
+.btn_2:hover {
+    -webkit-animation: ease-in-out;
+}
+
+thead {
+    font-stretch: expanded;
+    font-size: larger;
+    background-color: #2e3636
+}
+
+.tbl {
+    padding-left: 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+}
+
+td {
+    padding-right: 11px;
+    padding-left: 3px;
+}
+
+tr:hover {
+    color: #d4d4e3;
+}
+
+thead:hover {
+    color: #b6b6c9;
+}
